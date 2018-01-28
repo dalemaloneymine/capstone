@@ -1,0 +1,51 @@
+USE [MEMBERS]
+GO
+/****** Object:  StoredProcedure [dbo].[INSERT_VEHICLES]    Script Date: 1/28/2018 2:42:33 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+ALTER PROCEDURE [dbo].[INSERT_VEHICLES]
+
+        
+       @year                           int                      , 
+       @make                           varchar(50)              , 
+       @model                          varchar(50)              , 
+       @submodel                       varchar(50)              , 
+       @bodystyle                      varchar(50)              , 
+       @category                       varchar(50)      		,
+	   @memberid					   bigint	
+	               
+	   
+	   			                   
+AS 
+BEGIN 
+     
+
+     INSERT INTO dbo.VEHICLES
+
+           (
+            YEAR     	                 ,
+            MAKE                         ,
+            MODEL                        ,
+            SUBMODEL                     ,
+            BODYSTYLE                    ,
+            CATEGORY                     ,
+            MEMBERID     				 
+									                   
+			
+           )
+     VALUES 
+          ( 
+           
+            @year                         ,
+            @make                         ,
+            @model                        ,
+            @submodel                     ,
+            @bodystyle                    ,
+            @category                     ,
+			@memberid
+					    
+          ) 
+
+END 

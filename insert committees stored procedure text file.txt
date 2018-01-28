@@ -1,0 +1,44 @@
+USE [MEMBERS]
+GO
+/****** Object:  StoredProcedure [dbo].[INSERT_COMMITTEES]    Script Date: 1/28/2018 2:44:22 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+ALTER PROCEDURE [dbo].[INSERT_COMMITTEES]
+
+        
+       @committeename                  varchar(50)              , 
+       @firstname                      varchar(50)              , 
+       @lastname                       varchar(50)              , 
+       @phone                          int                      , 
+       @memberid					   bigint	
+	               
+	   
+	   			                   
+AS 
+BEGIN 
+     
+
+     INSERT INTO dbo.COMMITTEES
+
+           (
+            COMMITTEENAME                ,
+            FIRSTNAME                    ,
+            LASTNAME                     ,
+			PHONE                        ,
+            MEMBERID     				 
+				)					                   
+			
+           
+     VALUES 
+          (
+            @committeename                ,
+            @firstname                    ,
+            @lastname                     ,
+            @phone                        ,
+            @memberid
+			)		    
+          
+
+END 
