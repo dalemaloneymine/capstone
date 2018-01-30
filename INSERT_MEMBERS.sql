@@ -45,5 +45,3 @@ BEGIN
           ) 
 
 END 
-
-GO
