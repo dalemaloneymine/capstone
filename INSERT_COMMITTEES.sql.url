@@ -1,0 +1,41 @@
+ CREATE PROCEDURE INSERT_VEHICLES
+
+        
+      @year			int						,
+	  @make			varchar(30)				,
+	  @model		varchar(30)				,
+	  @submodel		varchar(50)				,	
+	  @bodystyle	varchar(30)				,
+	  @category		varchar(20) 
+	               
+	   
+	   			                   
+AS 
+BEGIN 
+     
+
+     INSERT INTO VEHICLES
+
+           (
+            YEAR							,
+			MAKE							,	
+			MODEL							,
+			SUBMODEL						,
+			BODYSTYLE						,	
+			CATEGORY
+									                   
+			
+           )
+     VALUES 
+          ( 
+           
+            @year							,
+			@make							,
+			@model							,
+			@submodel						,	
+			@bodystyle						,
+			@category		 
+					    
+          ) 
+
+END 
